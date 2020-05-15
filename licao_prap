@@ -1,0 +1,71 @@
+@Entity(tableName = "curiosities")
+public class Curiosity {
+	
+	@PrimaryKey(autoGenerate = true)
+	@NonNull
+	@ColumnInfo(name = "id")
+	private int id;
+	
+	@Nullable
+	@ColumnInfo(name = "creationDate")
+	private String creationDate;
+	
+	@Nullable
+	@ColumnInfo(name = "description")
+	private String description;
+
+	@Nullable
+	@ColumnInfo(name = "howDidYouNow")
+	private String howDidYouNow;
+	
+	@ColumnInfo(name = "importance")
+	private int importance;
+	
+	public Curiosity(@Nullable String creationDate, @Nullable String description, @Nullable String howDidYouNow, int importance) {
+		this.creationDate = creationDate;
+		this.description = description;
+		this.howDidYouNow = howDidYouNow;
+		this.importance = importance;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(@NonNull int id) {
+		this.id = id;
+	}
+
+	public String getCreationDate() {
+		return creationDate;
+	}
+
+	public void setCreationDate(@Nullable String creationDate) {
+		this.creationDate = creationDate;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(@Nullable String description) {
+		this.description = description;
+	}
+
+	public String getHowDidYouNow() {
+		return howDidYouNow;
+	}
+
+	public void setHowDidYouNow(@Nullable String howDidYouNow) {
+		this.howDidYouNow = howDidYouNow;
+	}
+
+	public int getImportance() {
+		return importance;
+	}
+
+	public void setImportance(int importance) {
+		this.importance = importance;
+	}
+
+}
